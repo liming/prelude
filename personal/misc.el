@@ -1,4 +1,3 @@
-
 ;;; customize eamcs editing properties
 
 ;; use this key to select
@@ -28,3 +27,5 @@
 (require 'google-translate)
 (global-set-key "\C-ct" 'google-translate-at-point)
 (global-set-key "\C-cT" 'google-translate-query-translate)
+
+(setq prelude-clean-whitespace-on-save nil)

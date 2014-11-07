@@ -1,4 +1,3 @@
-
 (defun my-prog-mode-defaults ()
   "Default coding hook, useful with any programming language."
   (turn-off-flyspell)
@@ -26,8 +25,6 @@
 ;;; js2 mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-(setq tab-width 4)
-
 
 ;; goto another paren
 (defun goto-paren ()
