@@ -14,7 +14,7 @@
           t)
 
 ;; set bookmark
-(require 'bm)
+;; (require 'bm)
 ;; M$ Visual Studio key setup.
 (global-set-key (kbd "<C-f6>") 'bm-toggle)
 (global-set-key (kbd "<f6>") 'bm-next)
