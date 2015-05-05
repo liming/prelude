@@ -1,7 +1,7 @@
 ;;; customize eamcs editing properties
 
 ;; use this key to select
-(global-set-key (kbd "M-<SPC>") 'set-mark-command)
+(global-set-key (kbd "s-<SPC>") 'set-mark-command)
 
 ;; set goto line to simple key
 (global-set-key (kbd "M-g") 'goto-line)
@@ -10,7 +10,7 @@
 
 ;; (set-default-font "ProggyCleanTT-12")
 ;; (set-default-font "Consolas-10")
-(set-default-font "Monospace-9")
+;;(set-default-font "Monaco-9")
 
 ;;; setup sunrise commander
 ;; (require 'sunrise-commander)
@@ -29,3 +29,7 @@
 (global-set-key "\C-cT" 'google-translate-query-translate)
 
 (setq prelude-clean-whitespace-on-save nil)
+
+;; specially for mac
+(setq mac-option-modifier 'super)
+(setq mac-command-modifier 'meta)
