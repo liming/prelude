@@ -2,7 +2,7 @@
 
 ;; Time-stamp: <2012-11-12 15:14:35 (mli)>
 
-(global-set-key (kbd "C-x f") 'find-grep-in-dir)
+(global-set-key (kbd "C-x f") 'rgrep)
 (global-set-key (kbd "C-x M-f") 'find-grep-current-word-in-current-dir)
 
 (autoload 'grep-apply-setting "grep"
@@ -16,7 +16,7 @@ SYMBOL should be one of `grep-command', `grep-template',
 (defun find-grep-in-dir (dir)
   "Run `find-grep' in directory DIR."
   (interactive (list (read-directory-name "Directory to find in: " default-directory "" t)))
-  (let ((prompt (concat "find " dir " -type f ! -path \"*/.svn*\" ! -path \"*~\" -print0 | xargs -0 -e grep -nH -e ")))
+  (let ((prompt (concat "find " dir " -type f ! -path \"*/.svn*\" ! -path \"*~\" -print0 -exec grep -nH -e ")))
     (set-grep-command prompt)
     (call-interactively 'find-grep)))
 

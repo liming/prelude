@@ -1,7 +1,7 @@
 ;;; customize eamcs editing properties
 
 ;; use this key to select
-(global-set-key (kbd "s-<SPC>") 'set-mark-command)
+(global-set-key (kbd "M-<SPC>") 'set-mark-command)
 
 ;; set goto line to simple key
 (global-set-key (kbd "M-g") 'goto-line)

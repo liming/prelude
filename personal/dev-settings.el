@@ -38,3 +38,23 @@
 (global-set-key (kbd "C-]") 'goto-paren)
 
 (yas-global-mode 1)
+
+(require 'corvu-c-style)
+(add-hook 'c-mode-common-hook 'corvu-set-c-style)
+(add-hook 'c-mode-common-hook 'corvu-make-newline-indent)
+
+(autoload 'gtags-mode "gtags" "" t)
+(setq gtags-mode-hook
+      '(lambda ()
+         (local-set-key "\M-t" 'gtags-find-tag)
+         (local-set-key "\M-r" 'gtags-find-rtag)
+         (define-key gtags-mode-map "\M-r" 'gtags-find-rtag)
+         (local-set-key "\M-s" 'gtags-find-symbol)
+         (local-set-key "\M-p" 'gtags-pop-stack)
+         ))
+                                        ;
+(add-hook 'c-mode-common-hook
+          '(lambda()
+             (gtags-mode 1)
+             ;;             (gtags-make-complete-list)
+             ))
